@@ -5,11 +5,9 @@ const GAMES_ENDPOINT = '/games';
 const MOVIES_ENDPOINT = '/movies';
 const KEY = 'a14d5c6234c14eaeb905e479e15e4698';
 
-
-
 function searchGames() {
   const searchInput = document.getElementById('searchInput').value;
-  const url = `${BASE_URL}${GAMES_ENDPOINT}?key=${KEY}?search=${searchInput}`;
+  const url = `${BASE_URL}${GAMES_ENDPOINT}?key=${KEY}&search=${searchInput}`;
 
   fetch(url)
     .then(response => response.json())
@@ -31,8 +29,8 @@ function displayResults(results) {
     results.forEach(result => {
       const gameTitle = result.name;
       const gameElement = document.createElement('div');
-      gameElement.innerHTML = `Title: ${gameTitle}`;
-      resultsContainer.appendChild(gameElement);
+      gameElement.innerHTML = `card-title: ${gameTitle}`;
+      resultsContainer.append(gameElement);
     });
   }
 }

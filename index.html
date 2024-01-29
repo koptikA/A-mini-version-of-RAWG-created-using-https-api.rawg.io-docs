@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div class="container" id="results">
+    <div class="container">
+            <hr>
             <h1>GAME</h1>
-            <form class="form">                      
-                <input class="search-input" type="text" id="searchInput" placeholder="Search game">
-                <button  class="search-btn" onclick="searchGames()">Search</button>
-                
-            </form>
-                      
-            <div class="row games-wrapper"></div>
+            <hr>
+            <form>                      
+                <input class="search-input" type="text" id="searchInput" placeholder="Search games">
+                <input class="search-btn" type="submit" onclick="searchGames()" value="Search"/> 
+            </form>             
+            <div id="results" class="row games-wrapper"></div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
